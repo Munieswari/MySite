@@ -15,7 +15,7 @@
       <a class="navbar-brand" href="#">MySite</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="bs.html">Home</a></li>
+       <li class="active"><a href="index.html">Home</a></li>
       <li class="dropdown">
        <a href="login.html">Login
         <span class="caret"></span></a>

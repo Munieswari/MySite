@@ -1,11 +1,27 @@
 package com.niit.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.backend.dao.UsersDao;
+import com.backend.model.Users;
 
 @Controller
 public class HomeController {
 
+	@Autowired
+	UsersDao userDao;
+	@RequestMapping("/test")
+	public String Test()
+	{
+		System.out.println("Home Controller");
+		Users user=new Users();
+		user.setUsername("eshu");
+		user.setPassword("eshu");
+		userDao.registerUser(user);
+		return "login";
+	}
 	
 	@RequestMapping("/")
 	public String index()
@@ -37,4 +53,5 @@ public class HomeController {
 		System.out.println("Services RequestMapping is Done");
 		return "services";
 	}
+	
 }
